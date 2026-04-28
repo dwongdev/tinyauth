@@ -17,7 +17,7 @@ PROD_COMPOSE := $(shell test -f "docker-compose.test.prod.yml" && echo "docker-c
 
 # Deps
 deps:
-	bun install --cwd frontend
+	bun install --frozen-lockfile --cwd frontend
 	go mod download
 
 # Clean data
